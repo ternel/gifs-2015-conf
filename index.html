@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<title>Gif, le format qu'il est bien</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="styles/prism.css" />
+	<link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Gif, le format qu'il est bien</h1>
+		<p>Forum PHP Paris - Benjamin Clay - Novembre 2015</p>
+	</header>
+
+<!--
+	<section class="slide" style="background-color:#FFFFEE;"><div>
+		<img src="pictures/intro.jpg">
+
+		<h1 style="margin-left: 25%; color: #812122;">OP WILL DELIVER</h1>
+	</div></section>
+-->
+
+	<section class="slide cover" id="coverpage"><div>
+		<div class="covertitle">
+			<h2>༼ つ ◕_◕ ༽つ <span style="font-family: 'Comic Sans MS'">GIF</span> ༼ つ ◕_◕ ༽つ<br /><span style="font-family: 'Comic Sans MS'">le format qu'il est bien.</span></h2>
+			<p>Cette conférence n'est pas une conférence sur le cyclimse</p>
+		</div>
+		<img src="covers/intro.jpg" />
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/procrastination.jpg" style="margin-top: -10%; margin-left: 20%;">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Comment est-ce que ça se prononce ?</h2>
+		<ul>
+			<li>La réponse, on la connait tous, est ...</li>
+			<li class="next">Gif. Et pas Gif.<br>
+				<img src="pictures/fight.gif">
+			</li>
+		</ul>
+		<!--
+		Fight: https://i.imgur.com/p5SLjuR.jpg
+		A ce soir, et pour celui qui prononce gif : https://i.imgur.com/J1X9Ufz.webm
+		En plus :https://i.imgur.com/NYMe9AY.jpg
+		guerre : https://i.imgur.com/bY0McDI.gifv</li>
+		-->
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<h2>C'est quoi ?</h2>
+			<li>Un format d'image</li>
+		</ul>
+		<img src="pictures/you-dont-say.gif" style="margin-left: 25%;">
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li>1987 : Création chez CompuServe</li>
+			<li>1989 : Ajout de l'animation</li>
+			<li>1995 : Netscape 2 supporte le format</li>
+			<li>2006 : Expiration du dernier brevet !</li>
+		</ul>
+		<div style="margin-top: -5%; margin-left: 20%"><img src="pictures/web-surfin-time.gif"></div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Comment ça marche ?</h2>
+		<p>Compression LZW (Lempel-Ziv-Welch) : Création d'un dictionnaire, réutilisation des termes</p>
+		<img src="pictures/give-a-fuck.gif" style="margin-top:-7%;">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Code de l'algo de compression / décompression</h2>
+		<div class="next">
+			<img src="pictures/dodo.gif">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>C'est vieux, mais on continue d'innover !</h2>
+		<span>ffmpeg intègre une amélioration depuis 2015 permettant de générer des gifs de meilleure qualité</span>
+		<pre><code class="language-bash">
+#!/bin/sh
+
+palette="/tmp/palette.png"
+filters="fps=15,scale=320:-1:flags=lanczos"
+
+ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
+ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse"
+       -y $2</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les trouver ?</h2>
+		<img src="pictures/i-have-a-gif.gif">
+		<ul>
+			<li>Reactiongifs - giphy - imgur</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les trouver ?</h2>
+		<ul>
+			<li>Application GIFs sur Mac</li>
+			<li>Extension chrome imgur</li>
+		</ul>
+		<div><img src="pictures/imgur-ext.png" style="margin-top:-7%;"></div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les trouver ?</h2>
+		<p>Reddit - Les profondeurs de l'interwebz<br>Protips: installer l'extension RES</p>
+		<img src="pictures/reddit.png" style="margin-top:-7%;">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les trouver ?</h2>
+		<img src="pictures/4chan.png">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les créer ?</h2>
+		<ul>
+			<li>Legend sur Mobile<br>
+			<img src="pictures/niece.gif" width="50%" style="margin-left:40%; margin-top: -5%;"></li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les créer ?</h2>
+		<div>
+			<img src="pictures/imgur.png">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les créer ?</h2>
+		<div>
+			<img src="pictures/pornhub.png">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les créer ?</h2>
+		<div>
+			<img src="pictures/damien-cover.gif"><br>http://woofmaker.com/
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Partout.</li>
+			<li>Par exemple, un anniversaire ?<br>
+				<img src="pictures/anniversaire.gif">
+				<img src="pictures/anniv.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Tickets Github</li>
+		</ul>
+		<div style="margin-left:40%; margin-top:-10%; width: 100%">
+			<img src="pictures/ticket-github.gif" width="50%" height="50%">
+		</div>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<div class="center"><img src="pictures/composer1.png" width="100%"></div>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/composer2.png" style="margin-left:25%;">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Email, interne ou client</li>
+			<li>Par exemple, mise en production ?<br>
+				<img src="pictures/mep.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Quand c'est l'heure d'aller manger...<br>
+				<img src="pictures/manger.gif">
+				<img src="pictures/broccoli.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Client qui n'a pas fait ses specs...<br>
+				<img src="pictures/client.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Client qui change les specs...<br>
+				<img src="pictures/jap-2.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Quand le client te demande si t'es sur de ne rien casser<br>
+				<img src="pictures/iam.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Quand le client te demande quelque chose le vendredi à 18H<br>
+				<img src="pictures/weekend.gif"><br>http://www.estcequecestbientotleweekend.fr
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Où les utiliser ?</h2>
+		<ul>
+			<li>Dans le terminal (github -> catimg)<br>
+				<img src="pictures/catimg.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Les gifs, c'est rigolo</h2>
+		<ul>
+			<li>Faut les utiliser !<br>
+			<img src="pictures/bye.gif">
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/party.gif" style="width: 100%" />
+		<div id="end">
+			<h2>
+				Merci !<br />
+				À ce soir pour la bière !</p>
+			</h2>
+		</div>
+	</div></section>
+
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<script src="styles/prism.js"></script>
+	<script src="styles/jquery-2.1.1.min.js"></script>
+	<script src="styles/progress.js"></script>
+</body>
+</html>
